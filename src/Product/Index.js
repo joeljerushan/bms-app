@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import * as eva from '@eva-design/eva';
+import { View } from 'react-native'
 import { ApplicationProvider, IconRegistry, Layout, Text, Button, Icon } from '@ui-kitten/components';
 import { EvaIconsPack } from '@ui-kitten/eva-icons';
 
-import AppRouter from './src/Router'
 
-
-class App extends Component {
+class ProductScreen extends Component {
 
   constructor(){
     super()
-    this.state = {}
+    this.state = {
+
+    }
   }
 
   componentDidMount(){
@@ -19,14 +20,11 @@ class App extends Component {
   render(){
     return(
       <>
-        <IconRegistry icons={EvaIconsPack} />
-        <ApplicationProvider {...eva} theme={eva.light}>
-          <AppRouter />
-        </ApplicationProvider>
+        <Text style={{ fontSize: 50, marginTop: 100}}>Product Screen</Text>
       </>
     )
   }
 
 }
 
-export default App;
+export default ProductScreen;
